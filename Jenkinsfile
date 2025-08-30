@@ -1,22 +1,12 @@
 pipeline {
-    agent any
-
+    agent {
+        label 'python'
+    }
     stages {
-        stage('Build') {
+        stage('Run Python Script') {
             steps {
-    	            //sh 'cd /home/george/Desktop/Demo'
-                script {
-                    sh 'cd /home/cicd2025'
-        sh 'python3 test1.py'
-            //value=sh(script: 'python3 /home/cicd2025/test1.py', returnStdout: true)
-            //echo "value is $value"
-            echo "Test"
-
-        }
-    	                  
+                sh 'python3 /home/cicd2025/test1.py'
             }
         }
     }
 }
-
-
