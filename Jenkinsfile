@@ -6,7 +6,8 @@ pipeline {
             steps {
     	            //sh 'cd /home/george/Desktop/Demo'
                 script {
-        sh 'python3 /home/cicd2025/test1.py'
+                    sh 'cd /home/cicd2025'
+        sh 'python3 test1.py'
             //value=sh(script: 'python3 /home/cicd2025/test1.py', returnStdout: true)
             //echo "value is $value"
             echo "Test"
