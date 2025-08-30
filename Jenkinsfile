@@ -3,7 +3,7 @@ pipeline{
   
   stages {
     stage('拉取git-hub 程式') {
-      steps{
+      steps {
 				// 待放指令
       }
     }
