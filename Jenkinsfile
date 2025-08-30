@@ -6,8 +6,8 @@ pipeline {
             steps {
                 sh 'ls'
                 sh 'pwd'
-                sh 'cd /home/cdci2025'
-                sh 'python3 /home/cicd2025/test1.py'
+                //sh 'cd /home/cdci2025'
+                sh 'python3 /var/lib/jenkins/workspace/test1.py'
             }
         }
     }
