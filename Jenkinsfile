@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    
+
     stages {
         stage('Run Python Script') {
             steps {
@@ -13,6 +13,19 @@ pipeline {
 
                 
             }
+        }
+    }
+
+    post {
+        always {
+            publishHTML([
+                reportDir: 'reports',
+                reportFiles: 'result.html',
+                reportName: 'Selenium Test Report',
+                keepAll: true,
+                alwaysLinkToLastBuild: true,
+                allowMissing: false
+            ])
         }
     }
 }
