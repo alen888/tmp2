@@ -21,7 +21,7 @@ pipeline {
             publishHTML([
                 reportDir: 'test_reports',
                 reportFiles: 'TestReport.html',
-                reportName: 'Test_Report',
+                reportName: 'Test_Report', #Jenkins_Name
                 keepAll: true,
                 alwaysLinkToLastBuild: true,
                 allowMissing: false
