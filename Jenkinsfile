@@ -16,6 +16,9 @@ pipeline {
         }
     }
 
+    stages {
+        stage('html') {
+
     post {
         always {
             publishHTML([
@@ -28,4 +31,7 @@ pipeline {
             ])
         }
     }
+        }
+    }
 }
+    
