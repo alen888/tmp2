@@ -16,9 +16,6 @@ pipeline {
         }
     }
 
-    stages {
-        stage('html') {
-
     post {
         always {
             publishHTML([
@@ -29,8 +26,6 @@ pipeline {
                 alwaysLinkToLastBuild: true,
                 allowMissing: false
             ])
-        }
-    }
         }
     }
 }
