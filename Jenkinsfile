@@ -20,8 +20,8 @@ pipeline {
         always {
             publishHTML([
                 reportDir: 'test_reports',
-                reportFiles: 'GoogleHomePageTestReport.html',
-                reportName: 'Selenium Test Report',
+                reportFiles: 'TestReport.html',
+                reportName: 'Test_Report',
                 keepAll: true,
                 alwaysLinkToLastBuild: true,
                 allowMissing: false
